@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/right-bar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style-index.css">
+
+
+
+    <title>Python tutorial</title>
+</head>
+<body>
+    <header class="adaptive">
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="logo" width="57px" height="57px">  
+            </div>
+            <input type="checkbox" id="menu-checkbox">
+            <nav role="navigation">
+                <label style="padding-top: 35px; font-weight: 600; color:white; font-family: 'Montserrat', sans-serif;" for="menu-checkbox" class="toggle-button"
+                data-open="МЕНЮ" data-close="ЗАКРЫТЬ" onclick></label>
+                <ul class="main-menu">
+                    <li><a href="../main/index.html">ГЛАВНАЯ</a></li>
+                    <li><a href="../main/tutorial.html">САМОУЧИТЕЛЬ</a></li>
+                    <li><a href="../main/test.html">ТЕСТ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <h1>Списки (list). Функции и методы списков</h1>
+                <p>Сегодня я расскажу о таком типе данных, как <b>списки</b>, операциях над ними и методах, о генераторах списков и о применении списков.</p>
+
+                <h2>Что такое списки?</h2>
+                <p>Списки в Python - упорядоченные изменяемые коллекции объектов произвольных типов (почти как массив, но типы могут отличаться).</p>
+                <p>Чтобы использовать списки, их нужно создать. Создать список можно несколькими способами. Например, можно обработать любой итерируемый объект (например, строку) встроенной функцией <b>list</b>:</p>
+
+                <div class="code">
+                    <pre>
+    >>> list('список')
+    ['с','п','и','с','о','к']  
+                    </pre>
+                </div>
+
+                <p>Список можно создать и при помощи литерала:</p>
+
+                <div class="code">
+                    <pre>
+    >>> s = []  # Пустой список
+    >>> l = ['s','p',['isok'],2]
+    >>> s
+    []
+    >>> l
+    ['s', 'p', ['isok'], 2]  
+                    </pre>
+                </div>
+
+                <p>Как видно из примера, список может содержать любое количество любых объектов (в том числе и вложенные списки), или не содержать ничего.</p>
+                <p>И еще один способ создать список - это <b>генераторы списков</b>. Генератор списков - способ построить новый список, применяя выражение к каждому элементу последовательности. Генераторы списков очень похожи на цикл for.</p>
+
+                <div class="code">
+                    <pre>
+    >>> c=[c*3 for c in'list']
+    >>> c
+    ['lll','iii','sss','ttt']
+                    </pre>
+                </div>
+
+                <p>Возможна и более сложная конструкция генератора списков:</p>
+
+                <div class="code">
+                    <pre>
+    >>> c=[c*3 for c in 'list']
+    >>> c
+    ['lll', 'sss', 'ttt']
+    >>> c=[c+d for c in 'list']
+    >>> c
+    ['ls','lp','lm','ss','sp'] 
+                    </pre>
+                </div>
+
+                <p>Но в сложных случаях лучше пользоваться обычным циклом for для генерации списков.</p>
+
+                <h2>Функции и методы списков</h2>
+
+                <p>Создать создали, теперь нужно со списком что-то делать. Для списков доступны основные встроенные функции, а также методы списков.</p>
+
+                <h2>Таблица "методы списков"</h2>
+
+                <table>
+                    <tr>
+                        <td>list.append(x)</td>
+                        <td>Добавляет элемент в конец списка</td>
+                    </tr>
+                    <tr>
+                        <td>list.extend(L)</td>
+                        <td>Расширяет список list, добавляя в конец все элементы списка L</td>
+                    </tr>
+                    <tr>
+                        <td>list.insert(i, x)</td>
+                        <td>Вставляет на i-ый элемент значение x</td>
+                    </tr>
+                    <tr>
+                        <td>list.remove(x)</td>
+                        <td>Удаляет первый элемент в списке, имеющий значение x. ValueError, если такого элемента не существует</td>
+                    </tr>
+                    <tr>
+                        <td>list.pop([i])</td>
+                        <td>Удаляет i-ый элемент и возвращает его. Если индекс не указан, удаляется последний элемент</td>
+                    </tr>
+                    <tr>
+                        <td>list.index(x, [start [, end]])</td>
+                        <td>Возвращает положение первого элемента со значением x (при этом поиск ведется от start до end)</td>
+                    </tr>
+                    <tr>
+                        <td>list.count(x)</td>
+                        <td>Возвращает количество элементов со значением x</td>
+                    </tr>
+                    <tr>
+                        <td>list.sort([key=функция])</td>
+                        <td>Сортирует список на основе функции</td>
+                    </tr>
+                    <tr>
+                        <td>list.reverse()</td>
+                        <td>Разворачивает список</td>
+                    </tr>
+                    <tr>
+                        <td>list.copy()</td>
+                        <td>Поверхностная копия списка</td>
+                    </tr>
+                    <tr>
+                        <td>list.clear()</td>
+                        <td>Очищает список</td>
+                    </tr>
+                </table>
+
+                <p>Нужно отметить, что методы списков, в отличие от строковых методов, изменяют сам список, а потому результат выполнения не нужно записывать в эту переменную.</p>
+
+                <div class="code end">
+                    <pre>
+    >>> l = [1, 2, 3, 5, 7]
+    >>> l.sort()
+    >>> l
+    [1, 2, 3, 5, 7]
+    >>> l = l.sort()
+    >>> print(l)
+    None
+                    </pre>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="bar-container">
+            <div class="bar">
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/1.html">Возможности языка python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/2.html">Синтаксис языка Python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/3.html">Инструкция if-elif-else</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/4.html">Циклы for и while</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/5.html">Ключевые слова</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/6.html">Встроенные функции</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/7.html">Числа</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/8.html">Списки</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/9.html">Видео</a>
+                </div>
+        
+        
+            </div>
+        </div>
+        
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="foot-text">
+                <p>©py_org</p>
+            </div>  
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/right-bar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style-index.css">
+
+
+
+    <title>Python tutorial</title>
+</head>
+<body>
+    <header class="adaptive">
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="logo" width="57px" height="57px">  
+            </div>
+            <input type="checkbox" id="menu-checkbox">
+            <nav role="navigation">
+                <label style="padding-top: 35px; font-weight: 600; color:white; font-family: 'Montserrat', sans-serif;" for="menu-checkbox" class="toggle-button"
+                data-open="МЕНЮ" data-close="ЗАКРЫТЬ" onclick></label>
+                <ul class="main-menu">
+                    <li><a href="../main/index.html">ГЛАВНАЯ</a></li>
+                    <li><a href="../main/tutorial.html">САМОУЧИТЕЛЬ</a></li>
+                    <li><a href="../main/test.html">ТЕСТ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <h1>Инструкция if-elif-else, проверка истинности, трехместное выражение if/else</h1>
+                <p><b>Условная инструкция if-elif-else</b> (её ещё иногда называют оператором ветвления) - основной инструмент выбора в Python. Проще говоря, она выбирает, какое действие следует выполнить, в зависимости от значения переменных в момент проверки условия.</p>
+
+                <h2>Синтаксис инструкции if</h2>
+                <p>Сначала записывается часть if с условным выражением, далее могут следовать одна или более необязательных частей elif, и, наконец, необязательная часть else. Общая форма записи условной инструкции if выглядит следующим образом:</p>
+
+                <div class="code">
+                    <pre>
+    if test1:
+        state1
+    elif test2:
+        state2
+    else:
+        state3
+                    </pre>
+                </div>
+
+                <p>Простой пример (напечатает 'true', так как 1 - истина):</p>
+
+                <div class="code">
+                    <pre>
+    a = int(input())
+    if a < -5:
+        print('Low')
+    elif -5 <= a <= 5:
+        print('Mid')
+    else:
+        print('High')
+                    </pre>
+                </div>
+
+                <p>Конструкция с несколькими elif может также служить отличной заменой конструкции switch - case в других языках программирования.</p>
+
+                <h2>Проверка истинности в Python</h2>
+                <ul>
+                    <li><p>Любое число, не равное 0, или непустой объект - истина.</p></li>
+                    <li><p>Числа, равные 0, пустые объекты и значение None - ложь</p></li>
+                    <li><p>Операции сравнения применяются к структурам данных рекурсивно</p></li>
+                    <li><p>Операции сравнения возвращают True или False</p></li>
+                    <li><p>Логические операторы and и or возвращают истинный или ложный объект-операнд</p></li>
+                </ul>
+
+                <p>Логические операторы:</p>
+
+                <div class="code">
+                    <pre>
+    X and Y
+                    </pre>
+                </div>
+
+                <p>Истина, если оба значения X и Y истинны.</p>
+
+                <div class="code">
+                    <pre>
+    X or Y
+                    </pre>
+                </div>
+
+                <p>Истина, если хотя бы одно из значений X или Y истинно.</p>
+
+                <div class="code">
+                    <pre>
+    not X
+                    </pre>
+                </div> 
+                
+                <p>Истина, если X ложно.</p>
+
+                <h2>Трехместное выражение if/else</h2>
+                <p>Следующая инструкция:</p>
+                <div class="code">
+                    <pre>
+    if X:
+        A = Y
+    else:
+        A = Z 
+                    </pre>
+                </div>
+
+                <p>довольно короткая, но, тем не менее, занимает целых 4 строки. Специально для таких случаев и было придумано выражение if/else:</p>
+
+                <div class="code">
+                    <pre>
+    A = Y if X else Z  
+                    </pre>
+                </div>
+
+                <p>В данной инструкции интерпретатор выполнит выражение Y, если X истинно, в противном случае выполнится выражение Z.</p>
+
+                <div class="code end">
+                    <pre>
+    >>> A = 't' if 's' else 'f'
+    >>> A
+    't'   
+                    </pre>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bar-container">
+            <div class="bar">
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/1.html">Возможности языка python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/2.html">Синтаксис языка Python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/3.html">Инструкция if-elif-else</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/4.html">Циклы for и while</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/5.html">Ключевые слова</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/6.html">Встроенные функции</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/7.html">Числа</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/8.html">Списки</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/9.html">Видео</a>
+                </div>
+        
+        
+            </div>
+        </div>
+        
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="foot-text">
+                <p>©py_org</p>
+            </div>  
+        </div>
+    </footer>
+</body>
+</html>

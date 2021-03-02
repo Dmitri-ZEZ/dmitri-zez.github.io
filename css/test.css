@@ -1,0 +1,36 @@
+.ans-container{
+    border: 1px solid rgb(89, 0, 255);
+}
+.ans{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.test label{
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.test .buttom {
+   background: rgb(22, 87, 172);
+   border: 1px solid rgb(22, 87, 172);
+   padding: 10px 15px;
+   font-size: 15px;
+   font-weight: 600;
+   font-family: 'Roboto', sans-serif;
+   margin: 15px 40%;
+}
+.test .buttom:hover {
+    background: rgb(17, 65, 128);
+    border: 1px solid rgb(17, 65, 128);
+    color: rgb(240, 255, 158);
+}
+.test label{
+    display: flex;
+}
+
+input{
+    margin-right: 5px;
+}

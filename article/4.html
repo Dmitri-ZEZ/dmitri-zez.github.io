@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/right-bar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style-index.css">
+
+
+
+    <title>Python tutorial</title>
+</head>
+<body>
+    <header class="adaptive">
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="logo" width="57px" height="57px">  
+            </div>
+            <input type="checkbox" id="menu-checkbox">
+            <nav role="navigation">
+                <label style="padding-top: 35px; font-weight: 600; color:white; font-family: 'Montserrat', sans-serif;" for="menu-checkbox" class="toggle-button"
+                data-open="МЕНЮ" data-close="ЗАКРЫТЬ" onclick></label>
+                <ul class="main-menu">
+                    <li><a href="../main/index.html">ГЛАВНАЯ</a></li>
+                    <li><a href="../main/tutorial.html">САМОУЧИТЕЛЬ</a></li>
+                    <li><a href="../main/test.html">ТЕСТ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <h1>Циклы for и while, операторы break и continue, волшебное слово else</h1>
+                <p>В этой статье я расскажу о <b>циклах for и while</b>, операторах <b>break</b> и <b>continue</b>, а также о слове <b>else</b>, которое, будучи употребленное с циклом, может сделать программный код несколько более понятным.</p>
+
+                <h2>Цикл while</h2>
+                <p>While - один из самых универсальных циклов в Python, поэтому довольно медленный. Выполняет тело цикла до тех пор, пока условие цикла истинно.</p>
+
+                <div class="code">
+                    <pre>
+    >>> i = 5
+    >>> while i < 15:
+    ...     print(i)
+    ...     i = i + 2
+    ...
+    5
+    7
+    9
+    11
+    13  
+                    </pre>
+                </div>
+
+                <h2>Цикл for</h2>
+                <p>Цикл for уже чуточку сложнее, чуть менее универсальный, но выполняется гораздо быстрее цикла while. Этот цикл проходится по любому итерируемому объекту (например строке или списку), и во время каждого прохода выполняет тело цикла.</p>
+
+                <div class="code">
+                    <pre>
+    >>> for i in 'hello world':
+    ...     print(i * 2, end='')
+    ...
+    hheelllloo  wwoorrlldd
+                    </pre>
+                </div>
+
+                <h2>Оператор continue</h2>
+                <p>Оператор continue начинает следующий проход цикла, минуя оставшееся тело цикла (for или while)</p>
+
+                <div class="code">
+                    <pre>
+    >>> for i in 'hello world':
+    ...     if i == 'o':
+    ...         continue
+    ...     print(i * 2, end='')
+    ...
+    hheellll  wwrrlldd  
+                    </pre>
+                </div>
+
+                <h2>Оператор break</h2>
+                <p>Оператор break досрочно прерывает цикл.</p>
+
+                <div class="code">
+                    <pre>
+    >>> for i in 'hello world':
+    ...     if i == 'o':
+    ...         break
+    ...     print(i * 2, end='')
+    ...
+    hheellll
+                    </pre>
+                </div>
+                <h2>Волшебное слово else</h2>
+                <p>Слово else, примененное в цикле for или while, проверяет, был ли произведен выход из цикла инструкцией break, или же "естественным" образом. Блок инструкций внутри else выполнится только в том случае, если выход из цикла произошел без помощи break.</p>
+
+                <div class="code end">
+                    <pre>
+    >>> for i in 'hello world':
+    ...     if i == 'a':
+    ...         break
+    ... else:
+    ...     print('Буквы a  нет')
+    ...
+    Буквы a в строке нет
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="bar-container">
+            <div class="bar">
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/1.html">Возможности языка python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/2.html">Синтаксис языка Python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/3.html">Инструкция if-elif-else</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/4.html">Циклы for и while</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/5.html">Ключевые слова</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/6.html">Встроенные функции</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/7.html">Числа</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/8.html">Списки</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/9.html">Видео</a>
+                </div>
+        
+        
+            </div>
+        </div>
+        
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="foot-text">
+                <p>©py_org</p>
+            </div>  
+        </div>
+    </footer>
+</body>
+</html>

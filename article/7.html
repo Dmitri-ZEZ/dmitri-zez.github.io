@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/right-bar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style-index.css">
+
+
+
+    <title>Python tutorial</title>
+</head>
+<body>
+    <header class="adaptive">
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="logo" width="57px" height="57px">  
+            </div>
+            <input type="checkbox" id="menu-checkbox">
+            <nav role="navigation">
+                <label style="padding-top: 35px; font-weight: 600; color:white; font-family: 'Montserrat', sans-serif;" for="menu-checkbox" class="toggle-button"
+                data-open="МЕНЮ" data-close="ЗАКРЫТЬ" onclick></label>
+                <ul class="main-menu">
+                    <li><a href="../main/index.html">ГЛАВНАЯ</a></li>
+                    <li><a href="../main/tutorial.html">САМОУЧИТЕЛЬ</a></li>
+                    <li><a href="../main/test.html">ТЕСТ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <h1>Числа: целые, вещественные, комплексные</h1>
+                <p>Числа в Python 3: целые, вещественные, комплексные. Работа с числами и операции над ними.</p>
+
+                <h2>Целые числа (int)</h2>
+                <p>Числа в Python 3 ничем не отличаются от обычных чисел. Они поддерживают набор самых обычных математических операций:</p>
+
+                <table>
+                    <tr>
+                        <td>x + y</td>
+                        <td>Сложение</td>
+                    </tr>
+                    <tr>
+                        <td>x - y</td>
+                        <td>Вычитание</td>
+                    </tr>
+                    <tr>
+                        <td>x * y</td>
+                        <td>Умножение</td>
+                    </tr>
+                    <tr>
+                        <td>x / y</td>
+                        <td>Деление</td>
+                    </tr>
+                    <tr>
+                        <td>x // y</td>
+                        <td>Получение целой части от деления</td>
+                    </tr>
+                    <tr>
+                        <td>x % y</td>
+                        <td>Остаток от деления</td>
+                    </tr>
+                    <tr>
+                        <td>-x</td>
+                        <td>Смена знака числа</td>
+                    </tr>
+                    <tr>
+                        <td>abs(x)</td>
+                        <td>Модуль числа</td>
+                    </tr>
+                    <tr>
+                        <td>divmod(x, y)</td>
+                        <td>Пара (x // y, x % y)</td>
+                    </tr>
+                    <tr>
+                        <td>x ** y</td>
+                        <td>Возведение в степень</td>
+                    </tr>
+                    <tr>
+                        <td>pow(x, y[, z])</td>
+                        <td>x^y по модулю (если модуль задан)</td>
+                    </tr>
+                </table>
+
+                <p>Также нужно отметить, что целые числа в python 3, в отличие от многих других языков, поддерживают длинную арифметику (однако, это требует больше памяти).</p>
+
+                <div class="code">
+                    <pre>
+    >>> 255 + 34
+    289
+    >>> 5 * 2
+    10
+    >>> 20 / 3
+    6.666666666666667
+    >>> 20 // 3
+    6
+    >>> 20 % 3
+    2
+    >>> 3 ** 4
+    81
+    >>> pow(3, 4)
+    81
+    >>> pow(3, 4, 27)
+    0
+    >>> 3 ** 150
+    36998848
+                    </pre>
+                </div>
+
+                <h2>Битовые операции</h2>
+                <p>Над целыми числами также можно производить битовые операции</p>
+
+                <table>
+                    <tr>
+                        <td>x | y</td>
+                        <td>Побитовое или</td>
+                    </tr>
+                    <tr>
+                        <td>x ^ y</td>
+                        <td>Побитовое исключающее или</td>
+                    </tr>
+                    <tr>
+                        <td>x & y</td>
+                        <td>Побитовое и</td>
+                    </tr>
+                    <tr>
+                        <td>x << n</td>
+                        <td>Битовый сдвиг влево</td>
+                    </tr>
+                    <tr>
+                        <td>x >> y</td>
+                        <td>Битовый сдвиг вправо</td>
+                    </tr>
+                    <tr>
+                        <td>~x</td>
+                        <td>Инверсия битов</td>
+                    </tr>
+                </table>
+
+                <h2>Дополнительные методы</h2>
+                <p><b>int.bit_length()</b> - количество бит, необходимых для представления числа в двоичном виде, без учёта знака и лидирующих нулей.</p>
+
+                <div class="code">
+                    <pre>
+    >>> n = -37
+    >>> bin(n)
+    '-0b100101'
+    >>> n.bit_length()
+    6  
+                    </pre>
+                </div>
+
+                <p><b>int.to_bytes</b>(length, byteorder, *, signed=False) - возвращает строку байтов, представляющих это число.</p>
+
+                <div class="code">
+                    <pre>
+    >>> (1024).to_bytes(2)
+    b'\x04\x00'
+    >>> (1024).to_bytes()
+    b'\x00\x00\x00\x00\x00'
+    >>> (-1024).to_bytes(10)
+    b'\xff\xff\'
+    >>> x = 1000
+    >>> x.to_bytes(8)
+    b'\xe8\x03' 
+                    </pre>
+                </div>
+
+                <p>classmethod <b>int.from_bytes</b>(bytes, byteorder, *, signed=False) - возвращает число из данной строки байтов.</p>   
+
+                <div class="code">
+                    <pre>
+    >>> int.from_bytes(b)
+    16
+    >>> int.from_bytes(b)
+    4096
+    >>> int.from_bytes(b)
+    -1024
+    >>> int.from_bytes(b)
+    64512
+    >>> int.from_bytes()
+    16711680
+                    </pre>
+                </div>
+
+                <h2>Системы счисления</h2>
+                <p>Те, у кого в школе была информатика, знают, что числа могут быть представлены не только в десятичной системе счисления. К примеру, в компьютере используется двоичный код, и, к примеру, число 19 в двоичной системе счисления будет выглядеть как 10011. Также иногда нужно переводить числа из одной системы счисления в другую. Python для этого предоставляет несколько функций:</p>
+
+                <ul>
+                    <li><p><b>int</b>([object], [основание системы счисления]) - преобразование к целому числу в десятичной системе счисления. По умолчанию система счисления десятичная, но можно задать любое основание от 2 до 36 включительно.</p></li>
+                    <li><p><b>bin</b>(x) - преобразование целого числа в двоичную строку.</p></li>
+                    <li><p><b>hex</b>(х) - преобразование целого числа в шестнадцатеричную строку.</p></li>
+                    <li><p><b>oct</b>(х) - преобразование целого числа в восьмеричную строку.</p></li>
+                </ul>
+
+                <p>Примеры:</p>
+
+                <div class="code end">
+                    <pre>
+    >>> a = int('19') 
+    >>> b = int('19.5')  
+    Traceback (most):
+      File "", line 1, in
+    ValueError: invalid literal
+    >>> c = int(19.5)  
+    >>> print(a, c)
+    19 19
+    >>> bin(19)
+    '0b10011'
+    >>> oct(19)
+    '0o23'
+    >>> hex(19)
+    '0x13'
+    >>> 0b10011  
+    19
+    >>> int('10011', 2)
+    19
+    >>> int('0b10011', 2)
+    19
+                    </pre>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bar-container">
+            <div class="bar">
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/1.html">Возможности языка python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/2.html">Синтаксис языка Python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/3.html">Инструкция if-elif-else</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/4.html">Циклы for и while</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/5.html">Ключевые слова</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/6.html">Встроенные функции</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/7.html">Числа</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/8.html">Списки</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/9.html">Видео</a>
+                </div>
+        
+        
+            </div>
+        </div>
+        
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="foot-text">
+                <p>©py_org</p>
+            </div>  
+        </div>
+    </footer>
+</body>
+</html>

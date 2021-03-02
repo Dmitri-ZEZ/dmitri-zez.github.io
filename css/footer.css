@@ -1,0 +1,15 @@
+footer{
+    height: 50px;
+    background: #363636;
+}
+
+footer p{
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+    color:white;
+    font-weight: 600;
+}
+.foot-text{
+    text-align: center;
+}
