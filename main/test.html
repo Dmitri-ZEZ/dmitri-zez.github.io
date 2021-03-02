@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/right-bar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/style-index.css">
+    <link rel="stylesheet" href="../css/test.css">
+
+
+
+    <title>Python tutorial</title>
+</head>
+<body>
+    <header class="adaptive">
+        <div class="header-container">
+            <div class="logo">
+                <img src="../img/logo.png" alt="logo" width="57px" height="57px">  
+            </div>
+            <input type="checkbox" id="menu-checkbox">
+            <nav role="navigation">
+                <label style="padding-top: 35px; font-weight: 600; color:white; font-family: 'Montserrat', sans-serif;" for="menu-checkbox" class="toggle-button"
+                data-open="МЕНЮ" data-close="ЗАКРЫТЬ" onclick></label>
+                <ul class="main-menu">
+                    <li><a href="../main/index.html">ГЛАВНАЯ</a></li>
+                    <li><a href="../main/tutorial.html">САМОУЧИТЕЛЬ</a></li>
+                    <li><a href="../main/test.html">ТЕСТ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <div class="content">
+                <h1>Пройди тест, проверь свои знания!</h1>
+                <form class="test" method="POST" name="Test1">
+
+
+                <div class="ans-container">
+                 <div class="ans">
+                    <p>Что будет напечатано при исполнении следующего кода? Используется Python 2.x.</p>
+                    <br>
+                    <div class="code end">
+                        <pre>
+    print(type(1 / 2))
+
+                        </pre>
+                    </div>
+                        <label><input type="radio" name="ans1" value=1>type 'int'</label> <br>
+                        <label><input type="radio" name="ans1" value=0>type 'number'</label> <br>
+                        <label><input type="radio" name="ans1" value=0>type 'double'</label> <br>
+                        <label><input type="radio" name="ans1" value=0>type 'tuple'</label> <br>
+                        </div>
+                    </div>
+
+    <div class="end"></div>
+
+                <div class="ans-container">
+                    <div class="ans">
+                        <p>Что делает следующий код?</p>
+                        <div class="code end">
+                            <pre>
+    def a(b, c, d): pass
+                            </pre>
+                        </div>
+                        <label><input type="radio" name="ans2" value=0>Определяет список и инициализирует его.</label> <br>
+                        <label><input type="radio" name="ans2" value=1>Определяет функцию, которая ничего не делает.</label> <br>
+                        <label><input type="radio" name="ans2" value=0>Определяет функцию, которая передает параметры.</label> <br>
+                        <label><input type="radio" name="ans2" value=0>	Определяет пустой класс.</label> <br>
+
+                    </div>
+                </div>
+
+    <div class="end"></div>
+    
+                <div class="ans-container">
+                    <div class="ans">
+                        <p>Что будет напечатано?</p>
+                        <div class="code end">
+                            <pre>
+    name = "snow storm"
+    print("%s" % name[6:8])
+                            </pre>
+                        </div>
+                        <label><input type="radio" name="ans3" value=0>st</label> <br>
+                        <label><input type="radio" name="ans3" value=0>sto</label> <br>
+                        <label><input type="radio" name="ans3" value=1>to</label> <br>
+                        <label><input type="radio" name="ans3" value=0>Syntax Error</label> <br>
+
+                    </div>
+                </div>
+
+    <div class="end"></div>
+    
+                <div class="ans-container">
+                    <div class="ans">
+                        <p>Что будет напечатано?</p>
+                        <div class="code end">
+                            <pre>
+ kvps={"use","bil","hil"}
+ print(kvps['password'])
+                            </pre>
+                        </div>
+                        <label><input type="radio" name="ans4" value=0>use</label> <br>
+                        <label><input type="radio" name="ans4" value=0>bil</label> <br>
+                        <label><input type="radio" name="ans4" value=0>hil</label> <br>
+                        <label><input type="radio" name="ans4" value=1>Ничего. TypeError.</label> <br>
+
+                    </div>
+                </div>
+
+    <div class="end"></div>
+    
+                <div class="ans-container">
+                    <div class="ans">
+                        <p>Что будет напечатано?</p>
+                        <div class="code end">
+                            <pre>
+ x = True
+ y = False
+ z = False
+ if not x or y:
+     print(1)
+ elif not x or not y and z:
+     print(2)
+ elif not x or y or not y:
+     print(3)
+ else:
+     print(4)
+                            </pre>
+                        </div>
+                        <label><input type="radio" name="ans5" value=0>1</label> <br>
+                        <label><input type="radio" name="ans5" value=0>2</label> <br>
+                        <label><input type="radio" name="ans5" value=1>3</label> <br>
+                        <label><input type="radio" name="ans5" value=0>4</label> <br>
+
+                    </div>
+                </div>
+
+    <div class="end"></div>
+    
+                <div class="ans-container">
+                    <div class="ans">
+                        <p>Что выведет следующий код?</p>
+                        <div class="code end">
+                            <pre>
+    d = lambda p: p * 2
+    t = lambda p: p * 3
+    x = 2
+    x = d(x)
+    x = t(x)
+    x = d(x)
+    print(x)
+                            </pre>
+                        </div>
+                        <label><input type="radio" name="ans6" value=0>7</label> <br>
+                        <label><input type="radio" name="ans6" value=0>12</label> <br>
+                        <label><input type="radio" name="ans6" value=1>24</label> <br>
+                        <label><input type="radio" name="ans6" value=0>36</label> <br>
+
+                    </div>
+                </div>
+
+    <div class="end"></div>
+    
+                <div class="ans-container">
+                    <div class="ans">
+                        <p>Что выведет следующий код?</p>
+                        <div class="code end">
+                            <pre>
+    a = [1,2,3,None,(),[],]
+    print(len(a))
+                            </pre>
+                        </div>
+                        <label><input type="radio" name="ans7" value=0>Syntax Error</label> <br>
+                        <label><input type="radio" name="ans7" value=0>4</label> <br>
+                        <label><input type="radio" name="ans7" value=0>5</label> <br>
+                        <label><input type="radio" name="ans7" value=1>6</label> <br>
+
+                    </div>
+                </div>
+
+    <div class="end"></div>
+    
+                <div class="ans-container">
+                    <div class="ans">
+                        <p>Что выведет следующий код, при его исполнении? Используется Python 3.x.</p>
+                        <div class="code end">
+                            <pre>
+    print(type(1 / 2))
+                            </pre>
+                        </div>
+                        <label><input type="radio" name="ans8" value=0>class 'int'</label> <br>
+                        <label><input type="radio" name="ans8" value=1>class 'float'</label> <br>
+                        <label><input type="radio" name="ans8" value=0>class 'double'</label> <br>
+                        <label><input type="radio" name="ans8" value=0>	class 'tuple'</label> <br>
+
+                    </div>
+                </div>
+
+    <div class="end"></div>
+    
+                <div class="ans-container">
+                    <div class="ans">
+                        <p>Что выведет следующий фрагмент кода?</p>
+                        <div class="code end">
+                            <pre>
+    x = 4.5
+    y = 2
+    print(x // y)
+                            </pre>
+                        </div>
+                        <label><input type="radio" name="ans9" value=1>2.0</label> <br>
+                        <label><input type="radio" name="ans9" value=0>2.25</label> <br>
+                        <label><input type="radio" name="ans9" value=0>9.0</label> <br>
+                        <label><input type="radio" name="ans9" value=0>20.25</label> <br>
+
+                    </div>
+                </div>
+
+    <div class="end"></div>
+
+                <input class="buttom" type="submit" value="Отправить" onclick="Complete()">
+                </form>
+
+            </div>
+        </div>
+        <div class="bar-container">
+            <div class="bar">
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/1.html">Возможности языка python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/2.html">Синтаксис языка Python</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/3.html">Инструкция if-elif-else</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/4.html">Циклы for и while</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/5.html">Ключевые слова</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/6.html">Встроенные функции</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/7.html">Числа</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/8.html">Списки</a>
+                </div>
+
+                <div class="links">
+                    <img src="../img/logo.png" height="20" width="20">
+                    <a href="../article/9.html">Видео</a>
+                </div>
+        
+        
+            </div>
+        </div>
+        
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="foot-text">
+                <p>©py_org</p>
+            </div>  
+        </div>
+    </footer>
+
+    <script src="../js/test.js"></script>
+</body>
+</html>
