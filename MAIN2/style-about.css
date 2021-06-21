@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
+}
+
+
+
+.adaptive{
+    display: block;
+    max-width: 90%;
+    height: auto;
+}
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background: white;
+    padding: 10px 0;
+}
+
+.header-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header-container .logo {
+    padding-top: 38px;
+}
+
+.header-container a{
+    color: #614747;
+    font-size: 12px;
+    margin: 45px 0;
+    margin-right: 27px;
+    font-weight: 700;
+}
+.header-container a:hover{
+    color:#39b4af;
+    text-decoration: none;
+}
+#menu-checkbox{
+    display: none;
+}
+ul{
+    display: flex;
+}
+
+
+
+
+.post2-container{
+    width: 100%;
+    background: #f6f6f6;
+}
+.post2{
+    width: 90%;
+    height: 244px;
+    padding-top: 90px;
+    margin: 0 auto;
+}
+.sliv{
+    display: flex;
+}
+.sliv img{
+    margin-right: 32px;
+    width: 45px;
+    height:45px;
+}
+
+.number{
+    color: black;
+    font-weight: 600;
+    font-size: 24px;
+}
+.text{
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+
+
+.aboutass-container{
+    background: white;
+    display: flex;
+    
+
+}
+.aboutass{
+    display: flex;
+}
+.text1{
+    padding-top: 10%;
+    padding-right: 5%;
+}
+.text1 h3{
+    font-size: 26px;
+    font-weight: bold;
+}
+.text1 p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #8d7373;
+
+}
+.image-adaptive{
+    display: none;
+}
+
+
+.need-container{
+    background: #f6f6f6;
+}
+.need{
+    text-align: center;
+}
+.text2{
+    padding: 5%;
+}
+.text2 h1{
+    font-size: 42px;
+    font-weight: bold;
+}
+.text2 p{
+    font-size: 21px;
+    font-weight: 600;
+    color: #8d7373;
+}
+.btn{
+    margin-bottom: 3%;
+}
+
+
+footer{
+    display: flex;
+    background: #141414;
+    height: 140px;
+}
+.foot{
+    text-align: right;
+}
+.foot p{
+    color: white;
+    font-size: 12px;
+    padding-right: 25px;
+    padding-top: 90px; 
+}
+
+
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery_str {
+    display: flex;
+    width: 100%;
+}
+
+.gallery_img {
+    width: 100%;
+}
+
+.lightzoom {
+    width: 25%;
+}
+
+
+
+
+@media screen and (max-width: 720px){
+    .header-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-menu{
+        display: none;
+    }
+    .main-menu li{
+        width: 100%;
+        display: block;
+        font-size: 12px;
+    }
+    .main-menu a{
+        display: block;
+        margin-top: 15px;
+    }
+    .toggle-button{
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: black;
+    }
+    .toggle-button:after{
+        content: attr(data-open);
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .main-menu{
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+        content: attr(data-close);
+    }
+    .header-container a{
+        
+    }
+    .main-menu{
+        position: relative;
+        top: 10px;
+        right: 0px;
+    }
+
+    .text1 p{
+        font-size: 12px;
+        font-weight: 600;
+        color: #614747;
+    
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 690px){
+    .sliv img{
+        
+        width: 30px;
+        height: 30px;
+    }
+    
+    .number{
+        font-size: 18px;
+    }
+    .text{
+        font-size: 14px;
+    }
+    .post2{
+        padding-top: 70px;
+        height: 200px;
+    }
+
+    .aboutass-container{
+        display: block;
+    }
+    .image{
+        display: none;
+    }
+    .image-adaptive{
+        display: block;
+    }
+    .adaptive{
+        max-width: 100%;
+    }
+    .text1{
+        text-align: center;
+        padding: 5%;
+    }
+    .text1 h3{
+        font-size: 28px;
+    }
+    .text1 p{
+        font-size: 18px;
+    }
+    .text2 h1{
+        font-size: 32px;
+    }
+    .text2 p{
+        font-size: 18px;
+    }
+}
+
+
+
+@media screen and (max-width: 575px){
+    .post2-container{
+        width: 100%;
+        background: #e1e1e1;
+    }
+    .sliv img{
+        width: 45px;
+        height:45px;
+    }
+    
+    .number{
+        font-size: 24px;
+    }
+    .text{
+        font-size: 17px;
+    }
+    .post2{
+        padding-top: 50px;
+        height: 320px;
+        padding-left: 5%; 
+    }
+
+}
+/* for logo */
+@media screen and (max-width: 370px){
+    /*.header-container .logo img{
+        width: 80%;
+        height: 80%;
+        padding-left: 2%;
+    }*/
+
+
+}
+
+
+
+
