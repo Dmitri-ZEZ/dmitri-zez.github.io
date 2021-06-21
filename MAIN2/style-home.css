@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-width: 320px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background: white;
+    padding: 10px 0;
+}
+
+.header-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header-container .logo {
+    padding-top: 38px;
+}
+
+.header-container a{
+    color: #614747;
+    font-size: 12px;
+    margin: 45px 0;
+    margin-right: 27px;
+    font-weight: 700;
+}
+.header-container a:hover{
+    color:#39b4af;
+    text-decoration: none;
+}
+#menu-checkbox{
+    display: none;
+}
+ul{
+    display: flex;
+}
+
+
+
+
+
+.carusel .autoplay{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.nedocarusel-containernedocar{
+    display: flex;
+}
+.nedocarusel{
+    display: none;
+}
+
+.adaptive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.post1-container{
+    display: flex;
+}
+.post1{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    margin-top: 65px;
+    color: #8d7373;
+    text-align: center;
+}
+
+.post2-container{
+    display: flex;
+    background-color: #f6f6f6;
+}
+.post2{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.post2 h1{
+    color: black;
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 60px;
+}
+.post2 p{
+    color: #8d7373;
+    font-weight: 600;
+    font-size: 21px;
+    padding-top: 40px;
+}
+
+.card-body p{
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+}
+.card{
+    margin: 0 auto;
+
+}
+.col-sm{
+    margin: 10px 0;
+}
+.card-text{
+    text-align: center;
+}
+
+
+
+.post3-container{
+    display: flex;
+    background: #f6f6f6;
+
+}
+.post3{
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+}
+.post3 h1{
+    color: black;
+    font-size: 42px;
+    font-weight: bold;
+    padding-top: 50px;
+}
+.post3 p{
+    color: #8d7373;
+    font-weight: 600;
+    font-size: 21px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.post4-container{
+    display: flex;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+.sliv{
+    display: flex;
+    padding-left: 10%;
+    padding-bottom: 30px;
+}
+.sliv p{
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    width: 70%;
+    margin-left: 10px;
+}
+.picture1{
+    display: none;
+}
+
+
+
+footer{
+    display: flex;
+    background: #141414;
+    height: 140px;
+}
+.foot{
+    text-align: right;
+}
+.foot p{
+    color: white;
+    font-size: 12px;
+    padding-right: 25px;
+    padding-top: 90px; 
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px){
+    .header-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-menu{
+        display: none;
+    }
+    .main-menu li{
+        width: 100%;
+        display: block;
+        font-size: 12px;
+    }
+    .main-menu a{
+        display: block;
+        margin-top: 15px;
+    }
+    .toggle-button{
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: black;
+    }
+    .toggle-button:after{
+        content: attr(data-open);
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .main-menu{
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+        content: attr(data-close);
+    }
+    .header-container a{
+       
+    }
+    .main-menu{
+        position: relative;
+        top: 10px;
+        right: 0px;
+    }
+
+
+    .post2 h1{
+        font-size: 40px;
+    }
+    .post3 h1{
+        font-size: 38px;
+    }
+
+
+
+
+    .carusel{
+        display: none;
+    }
+    .nedocarusel{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        
+    }  
+}
+
+@media screen and (max-width: 960px){
+    .post4-container{
+    display: flex;
+    margin-top: 50px;
+    
+}
+
+.sliv{
+    display: flex;
+    padding-left: 10%;
+    padding-bottom: 30px;
+}
+.sliv p{
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    width: 70%;
+    margin-left: 10px;
+}
+.picture1{
+    display: flex;
+    justify-content: center;
+}
+.picture{
+    display: none;
+}
+}
+@media screen and (max-width: 660px){
+    .post2 h1, .post3 h1{
+        font-size: 28px;
+    }
+    .post2 p, .post3 p{
+        font-size: 18px;
+    }
+}
+
+
+
+
+/* for logo */
+@media screen and (max-width: 370px){
+    /*.header-container .logo img{
+        width: 80%;
+        height: 80%;
+        padding-left: 2%;
+    }*/
+
+
+}
+
+
